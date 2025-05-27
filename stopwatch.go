@@ -39,7 +39,7 @@ func (s *Stopwatch) Stop() {
 
 // Update increments the timer instance.
 func (s *Stopwatch) Update() {
-	if s.isActive && s.maxTicks < s.currentTicks {
+	if s.isActive && s.currentTicks < s.maxTicks {
 		s.currentTicks++
 	}
 }
