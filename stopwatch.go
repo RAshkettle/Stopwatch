@@ -19,7 +19,7 @@ type Stopwatch struct {
 
 // NewStopwatch is a factory method which creates and returns
 // a new Stopwatch instance.
-func NewStopwatch(d *time.Duration) *Stopwatch {
+func NewStopwatch(d time.Duration) *Stopwatch {
 	return &Stopwatch{
 		currentTicks: 0,
 		maxTicks:     int(d.Milliseconds()) * ebiten.TPS() / 1000,
