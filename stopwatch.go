@@ -54,3 +54,8 @@ func (s *Stopwatch) Reset() {
 func (s *Stopwatch) IsDone() bool {
 	return s.maxTicks <= s.currentTicks
 }
+
+// Check if the stopwatch is currently running
+func (s *Stopwatch) IsRunning() bool {
+	return !s.IsDone() && s.isActive
+}
